@@ -73,11 +73,9 @@ main h2, main h3{
     display: grid;
     grid:repeat(3,1fr)/repeat(4,1fr);
     gap: 1rem;
-
     margin: 3rem;
     background-color: aqua;
     height: 100vh;
-    
 }
 .sobreMiContainer div{
     border: 1px solid black;
@@ -102,10 +100,13 @@ main h2, main h3{
 .sobreMiContainer div:nth-child(4){
 
     grid-column: 1/span 1;
-    grid-row: 3; background-image: url(../img/wmremove-transformed.png);
+    grid-row: 3; 
+    /* background-image: url(../img/wmremove-transformed.png);
     background-position: center;
-    background-size: cover;
-    /* height: 50%; */
+    background-size: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sobreMiContainer div:nth-child(5){
 
@@ -116,8 +117,8 @@ main h2, main h3{
     /* height: 50%; */
 }
 .foto img{
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: 50%;
 }
 .sobreMiContainer div:nth-child(6){
 
@@ -158,3 +159,30 @@ main h2, main h3{
     width: 40%;
     height: auto;
 }
+#idiomas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#idiomas table{
+    margin: 1rem;
+    padding: 1rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 1rem;
+    flex-basis: 50%;
+    text-align: center;
+    background-color: white;
+
+}
+.tableHeader{
+    color: white;
+    background-color: black;
+}
+.thiz{
+    border-top-left-radius: 1rem;
+}
+.thder{
+    border-top-right-radius: 1rem;
+}
+
