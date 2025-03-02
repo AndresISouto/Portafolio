@@ -125,3 +125,36 @@ main h2, main h3{
     grid-row: 3;
     /* height: 50%; */
 }
+/* #proyectos{
+    background-color: blueviolet;
+} */
+#proyectos h2{
+    color: white;
+}
+#proyectos h2,#proyectos h3{
+    text-align: center;
+}
+.contenedorProyectos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    /* background-color: brown; */
+    margin: 1rem;
+    padding: 1rem;
+}
+.contenedorProyectos div{
+    flex: 1 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+.imgProyectos{
+    width: 40%;
+    height: auto;
+}
