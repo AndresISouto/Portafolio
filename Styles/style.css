@@ -1,7 +1,29 @@
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
 :root{
     --colorBase: black;
+    /* CSS HEX */
+    --light-sky-blue: #a4d1fdbf;
+    --cornflower-blue: #6498f4ff;
+    --antiflash-white: #f0f0f0ff;
+    --uranian-blue: #b1d6fdff;
+    --uranian-blue-2: #c3e8feBF;
+
 }
-video {
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url(../img/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: roboto;
+}
+/* video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -9,7 +31,7 @@ video {
   min-height: 100%;
   z-index: -1;
   opacity: 0.8;
-}
+} */
 nav{
     display: flex;
     justify-content: center;
@@ -34,6 +56,10 @@ nav ul{
 nav ul a{
     text-decoration: none;  
     color: white;
+
+    &:hover{
+        color: var(--cornflower-blue);
+    }
     
 }
 header{
@@ -53,7 +79,7 @@ header img {
     flex: 1;
     flex-direction: column;
     padding: 1rem;
-    color: white;
+    color: black;
 }
 
 
@@ -63,7 +89,7 @@ main{
 
 }
 main h2{
-    color: white;
+    color: black;
 }
 main h2, main h3{
     text-align: center;
@@ -74,13 +100,17 @@ main h2, main h3{
     grid:repeat(3,1fr)/repeat(4,1fr);
     gap: 1rem;
     margin: 3rem;
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 100vh;
 }
-.sobreMiContainer div{
-    border: 1px solid black;
+.sobreMiContainer >div{
+    /* border: 1px solid black; */
     border-radius: 1rem;
-    background-color: aquamarine;
+    background-color: var(--uranian-blue-2);
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
+    padding: 1.5rem;
+    border: 4px solid black;
+    
 
 }
 .sobreMiContainer div:nth-child(1){
@@ -116,6 +146,7 @@ main h2, main h3{
     
     /* height: 50%; */
 }
+
 .foto img{
     height: auto;
     width: 50%;
@@ -130,7 +161,7 @@ main h2, main h3{
     background-color: blueviolet;
 } */
 #proyectos h2{
-    color: white;
+    color: black;
 }
 #proyectos h2,#proyectos h3{
     text-align: center;
@@ -150,10 +181,12 @@ main h2, main h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    background-color: var(--light-sky-blue);
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
     border-radius: 1rem;
     text-align: center;
     padding: 1rem;
+    border: 4px solid black;
 }
 .imgProyectos{
     width: 40%;
@@ -175,6 +208,14 @@ main h2, main h3{
     background-color: white;
 
 }
+#idiomas caption{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1rem;
+}
+#idiomas td, #idiomas th{
+    padding: 1rem;
+}
 .tableHeader{
     color: white;
     background-color: black;
@@ -185,4 +226,68 @@ main h2, main h3{
 .thder{
     border-top-right-radius: 1rem;
 }
+#experiencia{
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+#experiencia div{
+    flex: 1 1 0;
+    width: 80%;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: var(--uranian-blue-2);
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
+    border: 4px solid black;
+}
+#contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+form{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+form div{
+    padding: 1rem;
+    flex: 1;
+}
+#contacto input[type="submit"]{
+    background-color: var(--cornflower-blue);
+    color: white;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+#contacto input[type="submit"]:hover{
+    background-color: var(--colorBase);
+}
+footer{
+    background-color: var(--colorBase);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}
 
+.scale{
+    transition: 0.2s linear;
+    &:hover{
+        scale: 1.1;
+    }
+}

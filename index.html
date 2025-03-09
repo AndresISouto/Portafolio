@@ -12,7 +12,7 @@
     <nav>
         <ul>
             <li><a href="#inicio">inicio</a></li>
-            <li><a href="#sobreMi">sobreMi</a></li>
+            <li><a href="#sobreMi">sobre Mi</a></li>
             <li><a href="#proyectos">proyectos</a></li>
             <li><a href="#idiomas">idiomas</a></li>
             <li><a href="#experiencia">experiencia</a></li>
@@ -30,59 +30,60 @@
     <main id="sobreMi">
         <h2 >Sobre mi</h2>
         <div class="sobreMiContainer">
-            <div class="habilidades">
-                <h3>Habilidades</h3>
-                <ul>
-                    <li>HTML,CSS,JS,Java,SQL</li>
-                    <li>Matemáticas y estadística</li>
-                    <li>Diseño Web</li>
-                </ul>
+            <div class="habilidades sobreContenido scale">
+                    <h3>Habilidades</h3>
+                    <ul>
+                        <li>HTML,CSS,JS,Java,SQL,Git</li>
+                        <li>Matemáticas y estadística</li>
+                        <li>Diseño Web</li>
+                        <li>Trabajo en equipo</li>
+                    </ul>
             </div>
-            <div class="formacion">
-                <h3>Formacion</h3>
-                <p>Ciclo de Desarrolo de aplicaciones Web 2024-presente</p>
-                <p>Media carrera de física</p>
+            <div class="formacion sobreContenido scale">
+                    <h3>Formacion</h3>
+                    <p>Ciclo de Desarrolo de aplicaciones Web oficial 2024-En proceso</p>
+                    <p>Curso de desarrollo fullstack The Odin Project-En proceso</p>
+                    <p>Media carrera de física</p>
             </div>
-            <div class="intereses">
-                <h3>Intereses</h3>
-                <p>Que carajo pongo aqui?</p>
+            <div class="intereses sobreContenido scale">
+                    <h3>Intereses</h3>
+                    <p>Me gusta dar paseos por el campo  y coger moras silvestres, leer y aprender nuevas tecnologías </p>
             </div>
-            <div class="foto">
+            <div class="foto scale">
                 <img src="img/wmremove-transformed.png" alt="fotoDeRelleno">
             </div>
-            <div class="habilidadesBlandas">
-                <h3>Habilidades blandas</h3>
-                <ul>
-                    <li>Trabajo en equipo</li>
-                    <li>Gestioón del tiempo y planificacion</li>
-                    <li>Facilidad de adaptación y aprendizaje</li>
-                </ul>
+            <div class="habilidadesBlandas sobreContenido scale">
+                    <h3>Habilidades blandas</h3>
+                    <ul>
+                        <li>Trabajo en equipo</li>
+                        <li>Gestioón del tiempo y planificacion</li>
+                        <li>Facilidad de adaptación y aprendizaje</li>
+                    </ul>
             </div>
-            <div class="tecnoligias">
-                <h3>Tecnologías favoritas</h3>
-                <ul>
-                    <li>?</li>
-                    <li>?</li>
-                    <li>?</li>
-                </ul>
-
+            <div class="tecnoligias sobreContenido scale">
+                    <h3>Tecnologías favoritas</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Mysql</li>
+                        <li>CSS
+                    </ul>
             </div>
         </div>
     </main>
     <section id="proyectos">
         <h2>Mis Proyectos</h2>
         <div class="contenedorProyectos">
-            <div>
+            <div class="scale">
                 <img src="img/wmremove-transformed.png" alt="imagenProvisional" class="imgProyectos">
                 <h3>Proyecto 1</h3>
                 <p>Lorem ipsum dolor sit amet y no pe acuerdo que mas viene ahora</p>
             </div>
-            <div>
+            <div class="scale">
                 <img src="img/wmremove-transformed.png" alt="imagenProvisional" class="imgProyectos">
                 <h3>Proyecto 2</h3>
                 <p>Lorem ipsum dolor sit amet y no pe acuerdo que mas viene ahora</p>
             </div>
-            <div>
+            <div class="scale">
                 <img src="img/wmremove-transformed.png" alt="imagenProvisional" class="imgProyectos">
                 <h3>Proyecto 3</h3>
                 <p>Lorem ipsum dolor sit amet y no pe acuerdo que mas viene ahora</p>
@@ -98,16 +99,50 @@
             </tr>
             <tr>
                 <td>Español</td>
-                <td>Inglés</td>
+                <td>Nativo</td>
             </tr>
             <tr>
-                <td>Nativo</td>
+                <td>Inglés</td>
                 <td>Avanzado</td>
             </tr>
         </table>
     </section>
-    <video autoplay muted loop id="myVideo">
+    <section id="experiencia">
+        <h2>Experiencia</h2>
+        <div class="scale">
+            <h3>Titulo del puesto </h3>
+            <blockquote>En algun lugar de la mancha</blockquote>
+            <p>lorem ipsum dolor sit amet y no me acuerdo mas</p>
+        </div>
+        <div class="scale">
+            <h3>Titulo del puesto </h3>
+            <blockquote>En algun lugar de la mancha</blockquote>
+            <p>lorem ipsum dolor sit amet y no me acuerdo mas</p>
+        </div>
+    </section>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="https://httpbin.org/post" method="post" target="_blank">
+            <div>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="mail">Email:</label><br>
+                <input type="email" id="mail" name="mail" required>
+            </div>
+            <div>
+                <label for="mensaje">Mensaje:</label><br>
+                <input type="text" id="mensaje" class="mensaje" required>
+            </div>
+            <input type="submit" value="Enviar"> 
+        </form>
+    </section>
+    <footer >
+        <p>© Todos los derechos reservados</p>
+    </footer>
+    <!-- <video autoplay muted loop id="myVideo">
   <source src="img/Thin_Smoke_23___30s___4k_res.mp4" type="video/mp4">
-    </video>
+    </video> -->
 </body>
 </html>
