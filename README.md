@@ -2,8 +2,7 @@
 Práctica de Lenguaje de marcas: Portafolio
 
 
--poner los proyectos
--favicon
+
 
 Requisitos a forzar
 - Contacto funcional

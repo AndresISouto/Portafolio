@@ -81,7 +81,9 @@ header img {
     padding: 1rem;
     color: black;
 }
-
+#inicio,#sobreMi,#proyectos,#idiomas,#experiencia,#contacto{
+    scroll-margin-top: 8vh;
+}
 
 main{
     background-color: transparent; 
@@ -101,9 +103,9 @@ main h2, main h3{
     gap: 1rem;
     margin: 3rem;
     /* background-color: aqua; */
-    height: 100vh;
+    /* height: 100vh; */
 }
-.sobreMiContainer >div{
+.sobreMiContainer >div, .sobreMiContainer>img{
     /* border: 1px solid black; */
     border-radius: 1rem;
     background-color: var(--uranian-blue-2);
