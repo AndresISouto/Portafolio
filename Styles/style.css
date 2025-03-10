@@ -1,11 +1,13 @@
+
+/* Definimos una fuente de letra que descargamos */
 @font-face {
     font-family: roboto;
     src: url(../fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
 }
-
+/* Definimos unas variables que serán nuestra paleta de colores */
 :root{
     --colorBase: black;
-    /* CSS HEX */
+    
     --light-sky-blue: #a4d1fdbf;
     --cornflower-blue: #6498f4ff;
     --antiflash-white: #f0f0f0ff;
@@ -13,9 +15,11 @@
     --uranian-blue-2: #c3e8feBF;
 
 }
+/* Esto es para que los enlaces locales desplacen la pantalla de forma progresiva */
 html{
     scroll-behavior: smooth;
 }
+/* Imagen de fondo y fuente de letra general */
 body{
     background-image: url(../img/fondo.jpg);
     background-position: center;
@@ -23,15 +27,7 @@ body{
     background-attachment: fixed;
     font-family: roboto;
 }
-/* video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-  opacity: 0.8;
-} */
+/* El menú de navegación del comienzo con flex para centrar la lista y sticky para que se quede arriba  */
 nav{
     display: flex;
     justify-content: center;
@@ -40,81 +36,78 @@ nav{
     background-color: var(--colorBase);
     position: sticky;
     top: 0;
-    width: 100%;
+    
     height: 8vh;
     
     
 }
-
+/*flex para espaciar los enlaces  */
 nav ul{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     gap: 1.5rem;
 }
-
+/* enlaces blancos que cambian de color con el hover */
 nav ul a{
     text-decoration: none;  
-    color: white;
+    color: var(--antiflash-white);
 
     &:hover{
         color: var(--cornflower-blue);
     }
     
 }
+/* flex para poner el texto al lado de la imagen */
 header{
    
     display: flex;
-    gap: 4rem;
-    
-    
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
 }
+/* imagen de header */
 header img {
     width: 10%;
     height: 100%;
     padding: 1rem;
 }
+/* relleno para el texto */
 .headerRight{
-    display: flex;
-    flex: 1;
-    flex-direction: column;
     padding: 1rem;
-    color: black;
 }
+/* Esto es para que los enlaces locales tengan en cuenta la barra de navegación de arriba y se correspondan
+correctamente con el inicio de la sección correspondiente */
 #inicio,#sobreMi,#proyectos,#idiomas,#experiencia,#contacto{
     scroll-margin-top: 8vh;
 }
-
+/*Relleno del main  */
 main{
-    background-color: transparent; 
     padding: 1rem;
-
 }
-main h2{
-    color: black;
-}
+/* Centramos los títulos */
 main h2, main h3{
     text-align: center;
 }
+/* Definimos el contenedor del grid */
 .sobreMiContainer{
     
     display: grid;
     grid:repeat(3,1fr)/repeat(4,1fr);
     gap: 1rem;
     margin: 3rem;
-    /* background-color: aqua; */
-    /* height: 100vh; */
+    
 }
-.sobreMiContainer >div, .sobreMiContainer>img{
-    /* border: 1px solid black; */
+/* Definimos el estilo de los contenedores del grid*/
+.sobreMiContainer >div{
     border-radius: 1rem;
     background-color: var(--uranian-blue-2);
     box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
     padding: 1.5rem;
     border: 4px solid black;
-    
-
 }
+/* Las siguientes reglas son para definir las secciones del grid */
 .sobreMiContainer div:nth-child(1){
     grid-column: 1/span 2;
     grid-row: 1;
@@ -129,30 +122,27 @@ main h2, main h3{
     grid-column: 1/span 4;
     grid-row: 2;
 }
+/* Aquí centramos la imagen */
 .sobreMiContainer div:nth-child(4){
 
     grid-column: 1/span 1;
     grid-row: 3; 
-    /* background-image: url(../img/wmremove-transformed.png);
-    background-position: center;
-    background-size: cover; */
+    
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* Damos tamaño a la imagen */
+.foto img{
+    height: auto;
+    width: 100%;
+    border-radius: 1rem;
 }
 .sobreMiContainer div:nth-child(5){
 
     grid-column: 2/span 2;
     grid-row: 3;
    
-    
-    /* height: 50%; */
-}
-
-.foto img{
-    height: auto;
-    width: 100%;
-    border-radius: 1rem;
 }
 .sobreMiContainer div:nth-child(6){
 
@@ -160,26 +150,22 @@ main h2, main h3{
     grid-row: 3;
     /* height: 50%; */
 }
-/* #proyectos{
-    background-color: blueviolet;
-} */
-#proyectos h2{
-    color: black;
-}
+/* Centramos el texto de los títulos */
 #proyectos h2,#proyectos h3{
     text-align: center;
 }
+/* Definimos el contenedor flex de los proyectos */
 .contenedorProyectos{
     display: flex;
     align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-    /* background-color: brown; */
     margin: 1rem;
     padding: 1rem;
-    /* height: 55vh; */
+    
 }
+/* Definimos cada uno de los proyectos tambien con flex */
 .contenedorProyectos div{
     flex:1;
     display: flex;
@@ -192,47 +178,54 @@ main h2, main h3{
     text-align: center;
     padding: 1rem;
     border: 4px solid black;
-    /* height: 100%; */
+    
 }
+/* Le damos un tamaño a las imágenes de los proyectos */
 .imgProyectos{
     width: 100%;
     height: auto;
     border-radius: 1rem;
 }
+/* Flex para centrar la tabla */
 #idiomas {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/*Le dsamos estilo a la tabla*/
 #idiomas table{
     margin: 1rem;
     padding: 1rem;
     border-collapse: collapse;
-    /* border-spacing: 0; */
     border-radius: 1rem;
     flex-basis: 50%;
     text-align: center;
     background-color: white;
 
 }
+/* Le damos estilo al título de la tabla */
 #idiomas caption{
     font-weight: bold;
     font-size: 20px;
     padding: 1rem;
 }
+/* Relleno a los elementos de la tabla */
 #idiomas td, #idiomas th{
     padding: 1rem;
 }
+/* Colores a los encabezados de la tabla */
 th{
     color: white;
     background-color: black;
 }
+/* Las dos siguientes reglas son para redondear el borde */
 .thiz{
     border-top-left-radius: 1rem;
 }
 .thder{
     border-top-right-radius: 1rem;
 }
+/* Aquí definimos el contenedor flex de la sección de experiencias*/
 #experiencia{
     margin: 1rem;
     padding: 1rem;
@@ -242,8 +235,9 @@ th{
     flex-direction: column;
     gap: 0.5rem;
 }
+/* Aquí definimos cada uno de los contenedores que conforman la sección*/
 #experiencia div{
-    flex: 1 1 0;
+    flex: 1 1 auto;
     width: 80%;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -251,6 +245,7 @@ th{
     box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
     border: 4px solid black;
 }
+/* Aquí usamos flex para centrar el formulario */
 #contacto{
     display: flex;
     justify-content: center;
@@ -258,6 +253,7 @@ th{
     flex-direction: column;
     gap: 0.5rem;
 }
+/* Aquí usamos flex para posicionar los elementos del formulario en columna y les damos estilo */
 form{
     width: 30%;
     display: flex;
@@ -269,36 +265,40 @@ form{
     padding: 1rem;
     margin: 1rem;
 }
+/* Le damos relleno a los elementos del folmulario */
 form div{
     padding: 1rem;
     flex: 1;
 }
+/* Le damos estilo al botón */
 #contacto input[type="submit"]{
     background-color: var(--cornflower-blue);
     color: white;
     border: 1px solid black;
     width: 100%;
     border-radius: 0.5rem;
+    /* Cambiamos el color al hacer hover */
+    &:hover{
+        background-color: var(--colorBase);
+    }
 }
-#contacto input[type="submit"]:hover{
-    background-color: var(--colorBase);
-}
+/*Flex al footer para centrar los elementos*/
 footer{
     background-color: var(--colorBase);
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     height: 8vh;
 }
-
+/* Esto es para que los contenedores correspondientes aumenten un poco el tamaño al hacer hover */
 .scale{
     transition: 0.2s linear;
     &:hover{
         scale: 1.1;
     }
 }
+/* Definimos el tamaño del logo */
 .git{
     width: 2rem;
     height: 2rem;
