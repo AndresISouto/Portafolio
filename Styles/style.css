@@ -47,6 +47,7 @@ nav ul{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 /* enlaces blancos que cambian de color con el hover */
@@ -65,6 +66,7 @@ header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 /* imagen de header */
@@ -100,7 +102,7 @@ main h2, main h3{
     
 }
 /* Definimos el estilo de los contenedores del grid*/
-.sobreMiContainer >div{
+.sobreMiContainer > article{
     border-radius: 1rem;
     background-color: var(--uranian-blue-2);
     box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
@@ -108,22 +110,22 @@ main h2, main h3{
     border: 4px solid black;
 }
 /* Las siguientes reglas son para definir las secciones del grid */
-.sobreMiContainer div:nth-child(1){
+.sobreMiContainer article:nth-child(1){
     grid-column: 1/span 2;
     grid-row: 1;
 }
-.sobreMiContainer div:nth-child(2){
+.sobreMiContainer article:nth-child(2){
 
     grid-column: 3/span 2;
     grid-row: 1;
 }
-.sobreMiContainer div:nth-child(3){
+.sobreMiContainer article:nth-child(3){
 
     grid-column: 1/span 4;
     grid-row: 2;
 }
 /* Aquí centramos la imagen */
-.sobreMiContainer div:nth-child(4){
+.sobreMiContainer article:nth-child(4){
 
     grid-column: 1/span 1;
     grid-row: 3; 
@@ -138,13 +140,13 @@ main h2, main h3{
     width: 100%;
     border-radius: 1rem;
 }
-.sobreMiContainer div:nth-child(5){
+.sobreMiContainer article:nth-child(5){
 
     grid-column: 2/span 2;
     grid-row: 3;
    
 }
-.sobreMiContainer div:nth-child(6){
+.sobreMiContainer article:nth-child(6){
 
     grid-column: 4/span 1;
     grid-row: 3;
@@ -166,7 +168,7 @@ main h2, main h3{
     
 }
 /* Definimos cada uno de los proyectos tambien con flex */
-.contenedorProyectos div{
+.contenedorProyectos article{
     flex:1;
     display: flex;
     flex-direction: column;
@@ -236,7 +238,7 @@ th{
     gap: 0.5rem;
 }
 /* Aquí definimos cada uno de los contenedores que conforman la sección*/
-#experiencia div{
+#experiencia article{
     flex: 1 1 auto;
     width: 80%;
     border-radius: 1rem;
@@ -255,14 +257,15 @@ th{
 }
 /* Aquí usamos flex para posicionar los elementos del formulario en columna y les damos estilo */
 form{
-    width: 30%;
+    width: auto;
+    flex: 1 1 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--antiflash-white);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 1rem 5rem;
     margin: 1rem;
 }
 /* Le damos relleno a los elementos del folmulario */
@@ -302,4 +305,57 @@ footer{
 .git{
     width: 2rem;
     height: 2rem;
+}
+/* Esto es para pantallas pequeñas de menos de 600px que en la práctica son movil */
+@media (width <= 600px) {
+    /* Para el movil le quitamos el sticky porque ocupa mucho espacio de pantalla  */
+    nav{
+        height: auto;
+        position: static;
+    }
+    /* Ponemos los enlaces en vertical para que se vean mejor en la pantalla y los enlaces no sean muy pequeños y dificiles de presionar */
+    nav ul {
+        padding-left: 0;
+        flex-direction: column;
+        font-size: 18px;
+        padding: 1rem;
+    }y
+    /* Ponemos la disposición del header en columna para darle espacio a la foto y que se vea mejor  */
+    header{
+        flex-direction: column;
+    }
+    /* Hacemos la foto más grande */
+    header img{
+        width: 50%;
+        height: auto;
+    }
+    /* El grid lo ponemos en una sola columna para adaptarse mejor a la pantalla y quitamos la imagen porque no aporta mucho */
+    .sobreMiContainer{
+        grid-template-columns: 1fr;
+    }
+    /* Las siguientes reglas son para poner los diferentes article uno en cada fila y quitar la imagen */
+    .sobreMiContainer article:nth-child(1){
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
+    }
+    .sobreMiContainer article:nth-child(2){
+        grid-column: 1/span 1;
+        grid-row: 2/span 1;
+
+    }.sobreMiContainer article:nth-child(3){
+        grid-column: 1/span 1;
+        grid-row: 3/span 1;
+
+    }.sobreMiContainer article:nth-child(4){
+        display: none;
+
+    }.sobreMiContainer article:nth-child(5){
+        grid-column: 1/span 1;
+        grid-row: 4/span 1;
+
+    }.sobreMiContainer article:nth-child(6){
+        grid-column: 1/span 1;
+        grid-row: 5/span 1;
+
+    }
 }
