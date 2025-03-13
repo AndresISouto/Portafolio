@@ -263,10 +263,6 @@ form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-color: var(--uranian-blue); */
-    /* border-radius: 1rem;
-    border: 1px solid black; */
-    /* padding: 1rem 5rem; */
     margin: 1rem;
 }
 /* Le damos relleno a los elementos del folmulario */
@@ -274,7 +270,7 @@ form div{
     padding: 1rem;
  }
     
-
+/* Estilo a los contenedores del formulario */
 #nombre, #mensaje{
     background-color: var(--uranian-blue-2 );
     border-radius: 1rem;
