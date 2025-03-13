@@ -10,7 +10,7 @@
       // Codifica los valores para que sean válidos en una URL
       const encodedSubject = encodeURIComponent(subject);
       const encodedMessage = encodeURIComponent(message);
-
+      
       // Crea el enlace mailto
       const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedMessage}`;
 
