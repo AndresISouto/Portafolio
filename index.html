@@ -14,7 +14,7 @@
     <nav>
         <ul>
             <li><a href="#inicio">inicio</a></li>
-            <li><a href="#sobreMi">sobre Mi</a></li>
+            <li><a href="#sobreMi">sobre Mí</a></li>
             <li><a href="#proyectos">proyectos</a></li>
             <li><a href="#idiomas">idiomas</a></li>
             <li><a href="#experiencia">experiencia</a></li>
@@ -32,7 +32,7 @@
     </header>
     <!-- Grid en el main -->
     <main id="sobreMi">
-        <h2 >Sobre mi</h2>
+        <h2 >Sobre mí</h2>
         <section class="sobreMiContainer">
             <article class="habilidades sobreContenido scale">
                     <h3>Habilidades</h3>
@@ -132,15 +132,11 @@
         <form action="https://httpbin.org/post" method="post" target="_blank" id="formulario">
             <div>
                 <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div>
-                <label for="mail">Email:</label><br>
-                <input type="email" id="mail" name="mail" value="miCorreo@maildrop.cc" required>
+                <input type="text" placeholder="Mi nombre" id="nombre" name="nombre" required>
             </div>
             <div>
                 <label for="mensaje">Mensaje:</label><br>
-                <textarea rows="4" cols="20" id="mensaje" class="mensaje" required></textarea>
+                <textarea placeholder="Escribe aquí tu mensaje..." rows="4" cols="20" id="mensaje" class="mensaje" required></textarea>
             </div>
             <input type="submit" value="Enviar"> 
         </form>

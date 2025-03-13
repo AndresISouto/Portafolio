@@ -3,7 +3,7 @@
       event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
 
       // Obtén los valores del formulario
-      const email = document.getElementById('mail').value;
+      const email = 'miEmail@maildrop.cc'//document.getElementById('mail').value;
       const subject = 'Correo de ' + document.getElementById('nombre').value;
       const message = document.getElementById('mensaje').value;
 

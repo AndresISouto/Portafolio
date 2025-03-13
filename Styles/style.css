@@ -263,23 +263,32 @@ form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--antiflash-white);
-    border-radius: 1rem;
-    padding: 1rem 5rem;
+    /* background-color: var(--uranian-blue); */
+    /* border-radius: 1rem;
+    border: 1px solid black; */
+    /* padding: 1rem 5rem; */
     margin: 1rem;
 }
 /* Le damos relleno a los elementos del folmulario */
 form div{
     padding: 1rem;
-    flex: 1;
+ }
+    
+
+#nombre, #mensaje{
+    background-color: var(--uranian-blue-2 );
+    border-radius: 1rem;
+    width: 55vw;
+    padding: 1rem;
 }
 /* Le damos estilo al botón */
 #contacto input[type="submit"]{
     background-color: var(--cornflower-blue);
+    padding: 0.25rem;
     color: white;
     border: 1px solid black;
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     /* Cambiamos el color al hacer hover */
     &:hover{
         background-color: var(--colorBase);
