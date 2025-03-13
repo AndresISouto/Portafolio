@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="Styles/reset.css">
     <link rel="icon" href="img/favicon.ico">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
     <!-- Flex en el nav -->
@@ -128,14 +129,14 @@
     <!-- Flex en la sección de contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
-        <form action="https://httpbin.org/post" method="post" target="_blank">
+        <form action="https://httpbin.org/post" method="post" target="_blank" id="formulario">
             <div>
                 <label for="nombre">Nombre:</label><br>
                 <input type="text" id="nombre" name="nombre" required>
             </div>
             <div>
                 <label for="mail">Email:</label><br>
-                <input type="email" id="mail" name="mail" required>
+                <input type="email" id="mail" name="mail" value="miCorreo@maildrop.cc" required>
             </div>
             <div>
                 <label for="mensaje">Mensaje:</label><br>

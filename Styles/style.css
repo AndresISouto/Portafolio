@@ -257,7 +257,6 @@ th{
 }
 /* Aquí usamos flex para posicionar los elementos del formulario en columna y les damos estilo */
 form{
-    width: auto;
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
@@ -308,6 +307,7 @@ footer{
 }
 /* Esto es para pantallas pequeñas de menos de 600px que en la práctica son movil */
 @media (width <= 600px) {
+
     /* Para el movil le quitamos el sticky porque ocupa mucho espacio de pantalla  */
     nav{
         height: auto;
@@ -323,15 +323,19 @@ footer{
     /* Ponemos la disposición del header en columna para darle espacio a la foto y que se vea mejor  */
     header{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     /* Hacemos la foto más grande */
     header img{
-        width: 50%;
+        width: 100%;
         height: auto;
     }
     /* El grid lo ponemos en una sola columna para adaptarse mejor a la pantalla y quitamos la imagen porque no aporta mucho */
     .sobreMiContainer{
         grid-template-columns: 1fr;
+        padding: 1rem;
+        margin: 0.5rem;
     }
     /* Las siguientes reglas son para poner los diferentes article uno en cada fila y quitar la imagen */
     .sobreMiContainer article:nth-child(1){
