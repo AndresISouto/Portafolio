@@ -1,5 +1,5 @@
 # Portafolio
-Práctica de Lenguaje de marcas: Portafolio
+Este es mi portafolio personal realizado como proyecto
 
 repositorio de github: https://github.com/AndresISouto/Portafolio
 
